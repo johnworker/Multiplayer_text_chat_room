@@ -6,17 +6,34 @@ $(function () {
             scrollTop: 0
         }, 1000);
     });
-    //指定捲軸位置淡出淡入
-    // $(window).scroll(function () {
-        // if ($(this).scrollTop() > 200) {
-            // $('#gotop').stop().fadeTo('fast', 1);
-        // } else {
-            // $('#gotop').stop().fadeOut('fast');
-        // }
-    // });
 });
 
-
+// slick
+$(".work").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    // 響應式 RWD
+    responsive: [
+        // 平板：小於 1025
+        {
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        // 手機：小於 767
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
 // 使用者滑鼠滾動時 停止所有動畫
 $("html").on("mousewheel", function () {
     $("html").stop();
@@ -43,3 +60,5 @@ $(window).scroll(function () {
     //否則就淡出
     else arrow.stop().fadeOut(arrowTimeInt)
 });
+
+
