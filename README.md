@@ -1,9 +1,7 @@
 # Multiplayer_text_chat
-多人文字聊天室
-# web_scroll-place
-網頁 捲動到指定地點
+多人文字聊天室網站
 
-# 範例
+# 網站範例
 https://johnworker.github.io/Multiplayer_text_chat/
 
 # 使用方式
